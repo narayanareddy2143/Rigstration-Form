@@ -24,12 +24,12 @@
    <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://192.168.10.143:8081/repository/narayana-release/</url>
+            <url>http://192.168.120.143:8081/repository/narayana-release/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://192.168.10.143:8081/repository/narayana-snap/</url>
+            <url>http://192.168.120.143:8081/repository/narayana-snap/</url>
         </snapshotRepository>
     <site>
       <id>site-server</id>
