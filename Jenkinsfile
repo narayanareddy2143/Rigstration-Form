@@ -8,7 +8,7 @@ pipeline
 	stages{
 		stage('Code Checkout'){
 			steps{
-				git branch: 'main', url: 'https://github.com/Devops9AM/Rigstration-Form.git'
+				git branch: 'main', url: 'https://github.com/narayanareddy2143/Rigstration-Form.git'
 
 			}
 		}
@@ -76,14 +76,14 @@ pipeline
 		stage('Deploy War into Tomcat'){
 		    steps{
 		       sshagent(['Tomcat-Web-Server']) {
-	            sh 'scp /root/.jenkins/workspace/Registration-Form-1/webapp/target/*.war root@192.168.10.165:/opt/tomcat/webapps' 
+	            sh 'scp /root/.jenkins/workspace/Registration-Form-1/webapp/target/*.war root@192.168.120.146:/opt/tomcat/webapps' 
 	            }
 		    }
 		}
 		stage('mailing the status on this job'){
 			steps{
 			    mail bcc: '', body: '''Hi We are from Project Build Team. Pls have a look on this project output.
-''', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Job Execution', to: 'cloudgen0323@gmail.com'
+''', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline Job Execution', to: 'narayanareddy8042@gmail.com'
 }
 }
 
